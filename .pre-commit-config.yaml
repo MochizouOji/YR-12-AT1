@@ -1,0 +1,8 @@
+# .pre-commit-config.yaml
+repos:
+-   repo: https://github.com/PyCQA/bandit
+    rev: 1.7.9  # Use the latest stable version
+    hooks:
+    -   id: bandit
+        args: ["-r", "-c", "bandit.yaml"] # Run recursively, optionally using a config file
+        exclude: "tests" # Exclude the 'tests' directory from scanning
